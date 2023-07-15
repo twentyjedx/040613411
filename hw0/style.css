@@ -1,0 +1,41 @@
+body{
+    font-family: 'Anuphan', sans-serif;
+    
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+
+nav{
+    background:black;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+}
+
+div{
+    
+    font-size: 20px;
+    padding: 0 100px;
+    line-height: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+li{
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
