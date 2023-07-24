@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="form-echo.php" method="get">
+        
+        <p>1.ชื่อเต็ม/ย่อของสาขาวิชา</p>
+        <input type="text"
+        name="major"
+        placeholder="CS/Computer Science"
+        pattern="[A-Z a-z]+[\/][A-Z a-z\s]+"><br>
+        
+        <p>2.จำนวนเงินที่จะโอน</p>
+        <input type="text"
+        name="transfer"
+        pattern="[0-9\.]+"><br>
+        
+        <p>3.อาหารที่ชื่นชอบ 5 ชนิดที่ชื่นชอบจากมากไปน้อย</p>
+        <br>1 :<input type="text" name="food-1" pattern="^[ก-๏\s]+$"><br>
+        <br>2 :<input type="text" name="food-2" pattern="^[ก-๏\s]+$"><br>
+        <br>3 :<input type="text" name="food-3" pattern="^[ก-๏\s]+$"><br>
+        <br>4 :<input type="text" name="food-4" pattern="^[ก-๏\s]+$"><br>
+        <br>5 :<input type="text" name="food-5" pattern="^[ก-๏\s]+$"><br>
+        
+        <p>4. ค่าไฟฟ้า 3 เดือนที่ผ่านมา</p>
+        <input type="number"
+        name="ElectricBill">
+        <br>
+            
+        <p>5.รหัสบัตรประชาชน</p>
+        <input type="text"
+        name="id"
+        placeholder="x-xxxx-xxxxx-xx-x"
+        pattern="[0-9]{1}[\-][0-9]{4}[\-][0-9]{5}[\-][0-9]{2}[\-][0-9]{1}"><br>
+
+        <p>6.ความพึงพอใจของหนังสือเล่มนี้</p>
+        <input type="radio" name="satisfaction" value="very satisfied"  /> มาก
+        <input type="radio" name="satisfaction" value="moderate" /> ปานกลาง
+        <input type="radio" name="satisfaction" value="less satisfied" />น้อย
+        
+        <p>7.อาการป่วย</p>
+        <textarea cols="45" rows="5"name="illness">
+        </textarea><br>        
+
+        <p>8.ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่ </p>
+        <input type="radio" name="vaccine" value="ได้รับวัคซีน" checked="checked" /> ได้รับ
+        <input type="radio" name="vaccine" value="ไม่ได้รับวัคซีน" /> ไม่ได้รับ   
+        
+        <p>9.รหัสผ่าน</p>
+        <input type="password"5
+        name="password"><br>
+            
+        <p>10.เวลาเริ่มเข้าเรียนและสิ้นสุดการเรียน</p>
+        <input type="time"
+        name=" class start"> :
+        <input type="time"
+        name=" class end"><br>
+
+        <p>11.วันเวลาที่ต้องไปพบแพทย์</p>
+        <input type="datetime-local"
+        name="appointment"
+        ><br>
+        
+        <p><input type="submit" value="Submit">
+        </form>
+    
+</body>
+</html>
