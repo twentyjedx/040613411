@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>no3</title>
+    <script>
+        
+        let student = [
+        {
+            fullname: 'นายตั้งใจ เรียนมาก',
+            age: 18,
+            year: 1,
+            gpa: 3.40,
+            help: true
+        },
+        {
+            fullname: 'นายส่งงาน ตลอดมา',
+            age: 19,
+            year: 2,
+            gpa: 3.00,
+            help: false
+        },
+        {
+            fullname: 'นางสาวใส่ใจ  ดีงาม',
+            age: 20,
+            year: 3,
+            gpa: 2.90,
+            help: true
+        }
+]
+    </script>
+</head>
+<body>
+    <script>
+          window.onload = function(){
+            for (let i = 0; i < student.length; i++) {
+                let CurStu=student[i];
+
+                function Scholarship(student){
+                    if((student.gpa>3.20)||(student.year>2 && student.gpa>2.75 && student.help==true)){
+                        return 'ได้รับทุนการศึกษา';
+                    }
+                    else{
+                        return 'ไม่ได้รับทุนการศึกษา';
+                    }      
+                    }
+
+                function Reason(student){
+                    let str='';
+                    if((student.gpa>3.20)||(student.year>2 && student.gpa>2.75)){
+                        str='เนื่องจากเกรดเฉลี่ยถึงเกณฑ์';
+                        if (student.help==true) {
+                            str=str+'และยังช่วยงานภาควิชาด้วย';
+                        }
+                        else{
+                            str=str+' และยังไม้ได้ช่วยงานภาควิชา';
+                        }
+                    }
+                    else{
+                        str='เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์';
+                        if (student.help==true) {
+                            str=str+'และยังช่วยงานภาควิชาด้วย';
+                        }
+                        else{
+                            str=str+' และยังไม้ได้ช่วยงานภาควิชา';
+                        }
+                    }  
+                    return str;    
+                }
+        
+
+                    console.log(CurStu.fullname+" เกิดเมื่อปี "+(2564-CurStu.age)+" "+Scholarship(CurStu)+" "+Reason(CurStu))  ;
+
+                }
+                for (let i = 0; i < student.length; i++) {
+                    let RpStu = student[i]
+               
+                if((student[i].gpa>3.20)||(student[i].year>2 && student[i].gpa>2.75 && student[i].help==true)){
+                        console.log("ชั้นปีที่ "+student[i].year+"\n"+student[i].fullname+" "+Reason(RpStu));
+                        
+                    }
+                    else{
+                        console.log("ชั้นปีที่ "+student[i].year+"\n"+"ไม่มี");
+                }
+            
+            
+            }
+        }
+
+
+        
+    </script>
+    
+</body>
+</html>

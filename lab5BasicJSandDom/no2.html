@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Cal() {
+            var a = parseInt(document.getElementById("num1").value);
+            var b = parseInt(document.getElementById("num2").value);
+            var oper = document.getElementById("option").value;
+            var c;
+            if(oper=="+"){
+            c=a+b
+            }
+            else if(oper=="-"){
+            c=a-b;
+            }
+            else if(oper=="*"){
+            c=a*b;
+            }
+            else if(oper=="/"){
+            c=a/b;
+            }
+            document.getElementById("ans").value=c;
+        
+        }
+    </script>
+</head>
+
+    <body>
+    <input type="text" id="num1">
+    <select name="option" id="option">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="num2">=
+    <input type="text" id="ans" value="">
+    <input type="button" value="Compute" onclick="Cal()">
+    
+    
+    </body>
+</html>
