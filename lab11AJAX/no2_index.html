@@ -1,0 +1,25 @@
+<html><head>
+    <meta charset="utf-8">
+    <script>
+    function send() {
+        request = new XMLHttpRequest();
+        request.onreadystatechange = showResult;
+        var keyword = document.getElementById("keyword").value;
+        var url= "no2_find.php?keyword=" + keyword;
+        request.open("GET", url, true);
+        request.send(null);
+    }
+    function showResult() {
+        if (request.readyState == 4) {
+        if (request.status == 200)
+        document.getElementById("result").innerHTML = request.responseText;
+        
+    }
+    }
+    </script>
+    </head>
+    <body>
+        <h2>ค้นหาข้อมูลสมาชิก</h2>
+        <input type="text" id="keyword" onkeyup="send()">
+        <div id="result"></div>
+    </body></html>
